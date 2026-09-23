@@ -30,7 +30,7 @@ async function videoFile(button) {
   if (!window.offlineVideoData?.[key]) {
     await new Promise((resolve, reject) => {
       const script = document.createElement('script');
-      script.src = `media/offline-${key}.js`;
+      script.src = `media/offline-${key}.js?v=17min`;
       script.onload = resolve;
       script.onerror = () => reject(new Error('Lokaal downloadbestand ontbreekt.'));
       document.head.append(script);
